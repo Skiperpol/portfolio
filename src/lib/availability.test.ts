@@ -1,8 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { classes, officeHours, workday } from "@/content/schedule";
+import { classes, officeHours, workday, workdayLabel } from "@/content/schedule";
 import type { ClassBlock } from "@/content/types";
 import {
   activeClasses,
+  formatDuration,
   freeWindows,
   fullyFreeDays,
   toMinutes,
@@ -16,6 +17,11 @@ describe("time helpers", () => {
   it("converts between HH:MM and minutes", () => {
     expect(toMinutes("07:30")).toBe(450);
     expect(toTime(1085)).toBe("18:05");
+  });
+
+  it("formats durations for the calendar", () => {
+    expect(formatDuration(480)).toBe("8 h");
+    expect(formatDuration(245)).toBe("4 h 5 min");
   });
 });
 
@@ -53,17 +59,19 @@ describe("the real timetable", () => {
     expect(fullyFreeDays(later, officeHours.start, officeHours.end)).toEqual([0, 2]);
   });
 
-  it("leaves about 48 h now and 51 h later between 7 and 20", () => {
-    expect(Math.round(hours(weeklyFreeMinutes(classes, workday.start, workday.end)))).toBe(48);
+  it("leaves about 50 h now and 53 h later between 7:00 and 20:30", () => {
+    expect(workdayLabel).toBe("7–20:30");
+    expect(Math.round(hours(weeklyFreeMinutes(classes, workday.start, workday.end)))).toBe(50);
     expect(
       Math.round(hours(weeklyFreeMinutes(activeClasses(classes, "later"), workday.start, workday.end))),
-    ).toBe(51);
+    ).toBe(53);
   });
 
-  it("opens Tuesday and Friday evenings after classes", () => {
-    const toRanges = (day: 1 | 4) =>
+  it("opens evenings after classes", () => {
+    const toRanges = (day: 1 | 3 | 4) =>
       freeWindows(classes, day, workday.start, workday.end).map((w) => `${toTime(w.start)}-${toTime(w.end)}`);
-    expect(toRanges(1)).toEqual(["07:00-15:00", "17:00-20:00"]);
-    expect(toRanges(4)).toEqual(["07:00-15:00", "16:30-20:00"]);
+    expect(toRanges(1)).toEqual(["07:00-15:00", "17:00-20:30"]);
+    expect(toRanges(3)).toEqual(["13:00-17:05", "19:25-20:30"]);
+    expect(toRanges(4)).toEqual(["07:00-15:00", "16:30-20:30"]);
   });
 });

@@ -12,13 +12,16 @@ export const classes: ClassBlock[] = [
 ];
 
 /** When I can work at all. */
-export const workday = { start: "07:00", end: "20:00" };
+export const workday = { start: "07:00", end: "20:30" };
 
 /** Typical office hours, used to pick a day I can spend fully in the office. */
 export const officeHours = { start: "08:00", end: "18:00" };
 
-/** "08:00"–"20:00" → "8–20". */
-export const workdayLabel = `${Number(workday.start.slice(0, 2))}–${Number(workday.end.slice(0, 2))}`;
+/** "07:00" → "7", "20:30" → "20:30". */
+const shortTime = (time: string) => (time.endsWith(":00") ? String(Number(time.slice(0, 2))) : time.replace(/^0/, ""));
+
+/** "07:00"–"20:30" → "7–20:30". */
+export const workdayLabel = `${shortTime(workday.start)}–${shortTime(workday.end)}`;
 
 export const weekdays: Localized<string[]> = {
   pl: ["Pon", "Wt", "Śr", "Czw", "Pt"],

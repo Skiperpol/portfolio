@@ -86,8 +86,8 @@ export const aiPractice: { title: Localized; body: Localized }[] = [
   {
     title: { pl: "Fundamenty bez autopilota", en: "Fundamentals without autopilot" },
     body: {
-      pl: "House Organizer piszę celowo bez agentów AI, a wnioski notuję w repozytorium. Chcę rozumieć każdą warstwę, żeby trafnie oceniać kod, który generuje AI.",
-      en: "I'm deliberately writing House Organizer without AI agents and keeping learning notes in the repo. I want to understand every layer so I can judge AI-generated code well.",
+      pl: "Projekt House Organizer piszę celowo bez agentów AI, a wnioski notuję w repozytorium. Chcę rozumieć każdą warstwę, żeby trafnie oceniać kod, który generuje AI.",
+      en: "I'm deliberately writing the House Organizer project without AI agents and keeping learning notes in the repo. I want to understand every layer so I can judge AI-generated code well.",
     },
   },
   {
