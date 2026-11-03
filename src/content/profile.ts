@@ -26,7 +26,7 @@ export const experience: TimelineEntry[] = [
     },
   },
   {
-    period: { pl: "od 2023", en: "2023 – now" },
+    period: { pl: "od 2021", en: "2021 – now" },
     title: { pl: "Full-Stack Developer", en: "Full-Stack Developer" },
     place: "Freelance",
     detail: {
@@ -44,7 +44,10 @@ export const experience: TimelineEntry[] = [
     },
   },
   {
-    period: { pl: "luty – marzec 2022, październik 2020", en: "Feb – Mar 2022, Oct 2020" },
+    period: {
+      pl: "luty – marzec 2022, październik 2020",
+      en: "Feb – Mar 2022, Oct 2020",
+    },
     title: { pl: "Stażysta, programista", en: "Developer intern" },
     place: "DGCS S.A., Kalisz",
     detail: {
@@ -57,7 +60,10 @@ export const experience: TimelineEntry[] = [
 export const education: TimelineEntry[] = [
   {
     period: { pl: "od 2023", en: "2023 – now" },
-    title: { pl: "Informatyka Stosowana, 4. rok", en: "Applied Computer Science, 4th year" },
+    title: {
+      pl: "Informatyka Stosowana, 4. rok",
+      en: "Applied Computer Science, 4th year",
+    },
     place: "Politechnika Wrocławska",
     detail: {
       pl: "Honorowy członek koła naukowego Solvro, w którym współtworzyłem Eventownika.",
@@ -77,14 +83,20 @@ export const education: TimelineEntry[] = [
 
 export const aiPractice: { title: Localized; body: Localized }[] = [
   {
-    title: { pl: "Claude Code i Cursor na co dzień", en: "Claude Code and Cursor day to day" },
+    title: {
+      pl: "Claude Code i Cursor na co dzień",
+      en: "Claude Code and Cursor day to day",
+    },
     body: {
       pl: "Pomagają mi zrozumieć zadanie, pisać kod i testy oraz dokumentację. Ta strona też powstała z Claude Code: od analizy moich repozytoriów po kod w Next.js.",
       en: "They help me understand the task, write code and tests, and document the result. This site was built with Claude Code too: from analysing my repositories to the Next.js code.",
     },
   },
   {
-    title: { pl: "Fundamenty bez autopilota", en: "Fundamentals without autopilot" },
+    title: {
+      pl: "Fundamenty bez autopilota",
+      en: "Fundamentals without autopilot",
+    },
     body: {
       pl: "Projekt House Organizer piszę celowo bez agentów AI, a wnioski notuję w repozytorium. Chcę rozumieć każdą warstwę, żeby trafnie oceniać kod, który generuje AI.",
       en: "I'm deliberately writing the House Organizer project without AI agents and keeping learning notes in the repo. I want to understand every layer so I can judge AI-generated code well.",

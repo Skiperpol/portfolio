@@ -27,9 +27,10 @@ const pl = {
     github: "Profil na GitHubie",
   },
   hero: {
-    applying: (role: string, company: string) => `Kandydatura: ${role} w ${company}`,
+    applying: (role: string, company: string) =>
+      `Kandydatura: ${role} w ${company}`,
     lead: "Full-stack developer w TypeScripcie. Buduję aplikacje webowe w Next.js, React i NestJS: od interfejsu, przez API i bazę danych, po infrastrukturę w AWS.",
-    sub: "Student 4. roku Informatyki Stosowanej na Politechnice Wrocławskiej i honorowy członek koła naukowego Solvro. Programuję od 2018 roku, komercyjnie od 2023.",
+    sub: "Student 4. roku Informatyki Stosowanej na Politechnice Wrocławskiej i honorowy członek koła naukowego Solvro. Programuję od 2018 roku, komercyjnie od 2021.",
     primary: "Zobacz projekty",
     secondary: "GitHub",
   },
@@ -37,9 +38,11 @@ const pl = {
     label: "Wymagania z oferty w formie testów",
     mustHave: "wymagane",
     niceToHave: "mile widziane",
-    projects: (n: number) => `${n} ${plPlural(n, "projekt", "projekty", "projektów")}`,
+    projects: (n: number) =>
+      `${n} ${plPlural(n, "projekt", "projekty", "projektów")}`,
     summaryLabel: "Testy",
-    passed: (n: number) => `${n} ${plPlural(n, "zaliczony", "zaliczone", "zaliczonych")}`,
+    passed: (n: number) =>
+      `${n} ${plPlural(n, "zaliczony", "zaliczone", "zaliczonych")}`,
     todo: (n: number) => `${n} todo`,
     waiting: "Czekam na rozmowę",
     rerun: "Uruchom ponownie",
@@ -58,7 +61,8 @@ const pl = {
     title: "Projekty",
     lead: "Najpierw zlecenia komercyjne, potem projekty z otwartym kodem. Przy każdym: z czego korzystałem, jaka była moja rola i czego się nauczyłem.",
     commercialTitle: "Zlecenia komercyjne",
-    commercialNote: "Kod należy do klientów, więc tu bez linków do repozytoriów.",
+    commercialNote:
+      "Kod należy do klientów, więc tu bez linków do repozytoriów.",
     openTitle: "Projekty z kodem na GitHubie",
     openNote: "Od najnowszego.",
     visit: "Zobacz stronę",
@@ -107,7 +111,8 @@ const pl = {
     github: "GitHub",
   },
   footer: {
-    built: "Zbudowane w Next.js 16, TypeScripcie i Tailwind CSS, z testami w Vitest.",
+    built:
+      "Zbudowane w Next.js 16, TypeScripcie i Tailwind CSS, z testami w Vitest.",
     source: "Kod strony",
   },
 };
@@ -132,7 +137,8 @@ const en: UiStrings = {
     github: "GitHub profile",
   },
   hero: {
-    applying: (role: string, company: string) => `Applying for ${role} at ${company}`,
+    applying: (role: string, company: string) =>
+      `Applying for ${role} at ${company}`,
     lead: "Full-stack developer working in TypeScript. I build web apps with Next.js, React and NestJS: from the interface, through the API and database, to infrastructure on AWS.",
     sub: "Fourth-year Applied Computer Science student at Wrocław University of Science and Technology and an honorary member of the Solvro research group. Programming since 2018, commercially since 2023.",
     primary: "See projects",
@@ -163,7 +169,8 @@ const en: UiStrings = {
     title: "Projects",
     lead: "Client work first, then projects with open code. For each: what I used, what my role was and what I learned.",
     commercialTitle: "Client work",
-    commercialNote: "The code belongs to the clients, so there are no repository links here.",
+    commercialNote:
+      "The code belongs to the clients, so there are no repository links here.",
     openTitle: "Projects with code on GitHub",
     openNote: "Newest first.",
     visit: "Visit site",
@@ -212,7 +219,8 @@ const en: UiStrings = {
     github: "GitHub",
   },
   footer: {
-    built: "Built with Next.js 16, TypeScript and Tailwind CSS, tested with Vitest.",
+    built:
+      "Built with Next.js 16, TypeScript and Tailwind CSS, tested with Vitest.",
     source: "Source code",
   },
 };
