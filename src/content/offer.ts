@@ -60,8 +60,8 @@ export const offer: Offer = {
         en: "6–12 months of experience",
       },
       note: {
-        pl: "2 lata jako frontend dev, 5 lata freelance",
-        en: "2 years as a frontend dev, 3 freelancing",
+        pl: "2 lata jako frontend dev, 4 lata freelance",
+        en: "2 years as a frontend dev, 4 freelancing",
       },
       href: "#experience",
       status: "pass",

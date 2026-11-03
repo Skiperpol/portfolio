@@ -1,4 +1,5 @@
 import b2bShot from "@/assets/projects/b2b.webp";
+import cvFlowBpmn from "@/assets/projects/cv-flow-bpmn.webp";
 import ecdtShot from "@/assets/projects/ecdt.webp";
 import eventownikShot from "@/assets/projects/eventownik.webp";
 import mercedesShot from "@/assets/projects/mercedes.webp";
@@ -94,6 +95,13 @@ export const projects: Project[] = [
       ],
     },
     skills: ["typescript", "node", "sql", "devops", "documents"],
+    image: {
+      src: cvFlowBpmn,
+      alt: {
+        pl: "Diagram BPMN procesu: sześć torów dla mikroserwisów. Gateway zapisuje CV i rozsyła ApplicationSubmitted; Candidate, Parsing i Verification obsługują je równolegle. Qualification czeka na SkillsReady i SafetyVerified, ustawia QUALIFIED albo REJECTED i wysyła DecisionMade do serwisu powiadomień.",
+        en: "BPMN diagram of the process, in Polish: six lanes, one per microservice. Gateway stores the CV and fans out ApplicationSubmitted; Candidate, Parsing and Verification handle it in parallel. Qualification waits for SkillsReady and SafetyVerified, sets QUALIFIED or REJECTED and sends DecisionMade to the notification service.",
+      },
+    },
   },
   {
     id: "eventownik",
@@ -430,6 +438,19 @@ export const commercialProjects: CommercialProject[] = [
       pl: "System do obsługi zleceń rzeczoznawczych: lista zleceń z filtrami i statusami, raporty z oględzin ze zdjęciami i dokumentacją szkody oraz dane techniczne pojazdów z historią postępowania. Do tego aplikacja mobilna połączona z całym systemem.",
       en: "A system for handling vehicle appraisal orders: an order list with filters and statuses, inspection reports with photos and damage documentation, and vehicle technical data with case history. Plus a mobile app connected to the whole system.",
     },
+    stack: [
+      "TypeScript",
+      "NestJS",
+      "TypeORM",
+      "PostgreSQL",
+      "React",
+      "TanStack Query",
+      "Tailwind CSS",
+      "React Native",
+      "Expo",
+      "WatermelonDB",
+      "Cloudflare R2",
+    ],
     image: {
       src: ecdtShot,
       alt: {
@@ -445,6 +466,16 @@ export const commercialProjects: CommercialProject[] = [
       pl: "Sklep dla klientów biznesowych z włoskimi produktami spożywczymi: katalog z aktualnymi cenami po zalogowaniu, koszyk zapamiętany między sesjami i historia wszystkich zamówień.",
       en: "A shop for business customers selling Italian food: a catalogue with current prices after login, a cart that survives between sessions and a full order history.",
     },
+    stack: [
+      "TypeScript",
+      "MedusaJS",
+      "Next.js",
+      "React",
+      "PostgreSQL",
+      "Redis",
+      "Tailwind CSS",
+      "Cloudflare R2",
+    ],
     image: {
       src: b2bShot,
       alt: {

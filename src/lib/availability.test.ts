@@ -20,8 +20,8 @@ describe("time helpers", () => {
   });
 
   it("formats durations for the calendar", () => {
-    expect(formatDuration(480)).toBe("8 h");
-    expect(formatDuration(245)).toBe("4 h 5 min");
+    expect(formatDuration(480)).toBe("8\u00a0h");
+    expect(formatDuration(245)).toBe("4\u00a0h\u00a05\u00a0min");
   });
 });
 

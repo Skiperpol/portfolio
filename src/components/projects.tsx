@@ -128,7 +128,7 @@ function ProjectRow({ project, locale }: { project: Project; locale: Locale }) {
       </div>
 
       {project.image && (
-        <div data-reveal="scale" className="md:col-start-2 lg:col-end-4">
+        <div data-reveal="scale" className="mx-auto w-full max-w-4xl md:col-span-full">
           <Shot
             image={project.image}
             locale={locale}

@@ -1,3 +1,4 @@
+import { glueAll } from "@/lib/typography";
 import type { Locale } from "./types";
 
 /** Polish plural: 1 projekt, 2–4 projekty, 5+ projektów. */
@@ -29,8 +30,8 @@ const pl = {
   hero: {
     applying: (role: string, company: string) =>
       `Kandydatura: ${role} w ${company}`,
-    lead: "Full-stack developer w TypeScripcie. Buduję aplikacje webowe w Next.js, React i NestJS: od interfejsu, przez API i bazę danych, po infrastrukturę w AWS.",
-    sub: "Student 4. roku Informatyki Stosowanej na Politechnice Wrocławskiej i honorowy członek koła naukowego Solvro. Programuję od 2018 roku, komercyjnie od 2021.",
+    lead: "Full-stack developer w TypeScripcie. Buduję aplikacje webowe w Next.js, React i NestJS: od interfejsu, przez API i bazę danych, po infrastrukturę w AWS albo na własnym VPS-ie z Coolify.",
+    sub: "Student 4. roku Informatyki Stosowanej na Politechnice Wrocławskiej i honorowy członek koła naukowego Solvro. Programuję od 2018 roku, komercyjnie od 2022.",
     primary: "Zobacz projekty",
     secondary: "GitHub",
   },
@@ -59,7 +60,7 @@ const pl = {
   },
   projects: {
     title: "Projekty",
-    lead: "Najpierw zlecenia komercyjne, potem projekty z otwartym kodem. Przy każdym: z czego korzystałem, jaka była moja rola i czego się nauczyłem.",
+    lead: "Najpierw zlecenia komercyjne, potem projekty z otwartym kodem.",
     commercialTitle: "Zlecenia komercyjne",
     commercialNote:
       "Kod należy do klientów, więc tu bez linków do repozytoriów.",
@@ -139,8 +140,8 @@ const en: UiStrings = {
   hero: {
     applying: (role: string, company: string) =>
       `Applying for ${role} at ${company}`,
-    lead: "Full-stack developer working in TypeScript. I build web apps with Next.js, React and NestJS: from the interface, through the API and database, to infrastructure on AWS.",
-    sub: "Fourth-year Applied Computer Science student at Wrocław University of Science and Technology and an honorary member of the Solvro research group. Programming since 2018, commercially since 2023.",
+    lead: "Full-stack developer working in TypeScript. I build web apps with Next.js, React and NestJS: from the interface, through the API and database, to infrastructure on AWS or on my own OVHcloud VPS running Coolify.",
+    sub: "Fourth-year Applied Computer Science student at Wrocław University of Science and Technology and an honorary member of the Solvro research group. Programming since 2018, commercially since 2022.",
     primary: "See projects",
     secondary: "GitHub",
   },
@@ -225,4 +226,4 @@ const en: UiStrings = {
   },
 };
 
-export const ui: Record<Locale, UiStrings> = { pl, en };
+export const ui: Record<Locale, UiStrings> = { pl: glueAll(pl), en: glueAll(en) };

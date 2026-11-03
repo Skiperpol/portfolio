@@ -1,4 +1,5 @@
 import type { StaticImageData } from "next/image";
+import { glueAll } from "@/lib/typography";
 
 export const locales = ["pl", "en"] as const;
 export type Locale = (typeof locales)[number];
@@ -7,7 +8,7 @@ export type Locale = (typeof locales)[number];
 export type Localized<T = string> = Record<Locale, T>;
 
 export function pick<T>(value: Localized<T>, locale: Locale): T {
-  return value[locale];
+  return glueAll(value[locale]);
 }
 
 /** Skills that appear in the job offer and can be proven by a project. */

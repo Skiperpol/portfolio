@@ -8,11 +8,11 @@ export function toMinutes(time: string): number {
   return h * 60 + m;
 }
 
-/** 480 → "8 h", 245 → "4 h 5 min". */
+/** 480 → "8 h", 245 → "4 h 5 min", with no-break spaces so a duration never splits across lines. */
 export function formatDuration(minutes: number): string {
   const h = Math.floor(minutes / 60);
   const m = minutes % 60;
-  return m ? `${h} h ${m} min` : `${h} h`;
+  return m ? `${h}\u00a0h\u00a0${m}\u00a0min` : `${h}\u00a0h`;
 }
 
 /** Minutes since midnight → "HH:MM". */

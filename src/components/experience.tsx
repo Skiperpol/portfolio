@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import { education, experience, type TimelineEntry } from "@/content/profile";
 import { pick, type Locale } from "@/content/types";
 import { ui } from "@/content/ui";
+import { glue } from "@/lib/typography";
 import { Section } from "./section";
 
 function Timeline({
@@ -27,7 +28,7 @@ function Timeline({
             <div>
               <p className="font-medium">
                 {pick(e.title, locale)}
-                <span className="font-normal text-muted">, {e.place}</span>
+                <span className="font-normal text-muted">, {glue(e.place)}</span>
               </p>
               <p className="prose-measure mt-1.5 text-[0.9375rem] leading-relaxed text-muted">{pick(e.detail, locale)}</p>
             </div>

@@ -26,7 +26,7 @@ export const experience: TimelineEntry[] = [
     },
   },
   {
-    period: { pl: "od 2021", en: "2021 – now" },
+    period: { pl: "od 2022", en: "2022 – now" },
     title: { pl: "Full-Stack Developer", en: "Full-Stack Developer" },
     place: "Freelance",
     detail: {

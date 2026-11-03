@@ -15,7 +15,7 @@ export function Contact({ locale }: { locale: Locale }) {
     <footer id="contact" aria-labelledby="contact-title">
       <div className="frame py-24 md:py-32">
         <div data-reveal="text">
-          <h2 id="contact-title" className="display text-[clamp(3rem,9vw,6.5rem)]">
+          <h2 id="contact-title" className="display text-[clamp(2.25rem,9vw,6.5rem)]">
             <SplitWords text={t.title} />
           </h2>
           <p className="reveal-lead mt-6 text-xl text-muted">{t.lead}</p>
