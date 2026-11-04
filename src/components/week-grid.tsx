@@ -54,7 +54,7 @@ export function WeekGrid({ locale }: { locale: Locale }) {
           ))}
         </div>
         <p className="text-muted" aria-live="polite">
-          <span className="heading text-3xl text-text">{hours} h</span> {t.weekTotal}{" "}
+          <span className="heading text-3xl text-text">{hours}&nbsp;h</span> {t.weekTotal}{" "}
           <span className="whitespace-nowrap">{workdayLabel}</span>
         </p>
       </div>
