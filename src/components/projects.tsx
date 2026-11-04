@@ -72,9 +72,9 @@ function ProjectRow({ project, locale }: { project: Project; locale: Locale }) {
                 className="inline-flex items-center gap-2 text-accent transition-colors hover:text-accent-hover"
               >
                 {link.href.startsWith("https://github.com/") ? (
-                  <GitHubIcon width={15} height={15} />
+                  <GitHubIcon width="0.9375rem" height="0.9375rem" />
                 ) : (
-                  <GlobeIcon width={15} height={15} />
+                  <GlobeIcon width="0.9375rem" height="0.9375rem" />
                 )}
                 {link.label}
               </a>
@@ -177,7 +177,7 @@ function CommercialCard({ project, locale }: { project: CommercialProject; local
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 text-[0.9375rem] text-accent transition-colors hover:text-accent-hover"
               >
-                <GlobeIcon width={15} height={15} />
+                <GlobeIcon width="0.9375rem" height="0.9375rem" />
                 {t.visit}
               </a>
             )}

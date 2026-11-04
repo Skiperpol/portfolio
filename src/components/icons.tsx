@@ -2,7 +2,8 @@ import type { SVGProps } from "react";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
-const base = { width: 18, height: 18, "aria-hidden": true, focusable: false } as const;
+// Sized in rem so icons scale with the text around them.
+const base = { width: "1.125rem", height: "1.125rem", "aria-hidden": true, focusable: false } as const;
 
 export function GitHubIcon(props: IconProps) {
   return (
