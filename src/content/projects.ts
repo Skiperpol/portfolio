@@ -1,5 +1,6 @@
 import b2bShot from "@/assets/projects/b2b.webp";
 import cvFlowBpmn from "@/assets/projects/cv-flow-bpmn.webp";
+import dbDesignErd from "@/assets/projects/db-design-erd.webp";
 import ecdtShot from "@/assets/projects/ecdt.webp";
 import eventownikShot from "@/assets/projects/eventownik.webp";
 import mercedesShot from "@/assets/projects/mercedes.webp";
@@ -279,6 +280,13 @@ export const projects: Project[] = [
       ],
     },
     skills: ["sql", "git"],
+    image: {
+      src: dbDesignErd,
+      alt: {
+        pl: "Diagram ER bazy sklepu internetowego z typami kolumn i licznością relacji. Katalog: produkty, producenci, drzewo kategorii, atrybuty, opcje i warianty z promocjami. Klienci: użytkownicy, adresy, koszyki, opinie i ulubione. Zamówienia ze statusem, metodą dostawy i płatności oraz pozycjami. Magazyn: magazyny, egzemplarze towaru i wysyłki.",
+        en: "ER diagram of the online store database, with column types and relationship cardinality. Catalogue: products, manufacturers, a category tree, attributes, options and variants with promotions. Customers: users, addresses, carts, reviews and favourites. Orders with a status, delivery and payment method, and line items. Inventory: warehouses, stock items and shipments.",
+      },
+    },
   },
   {
     id: "typing-test",
